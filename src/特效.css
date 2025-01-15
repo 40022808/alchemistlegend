@@ -1,0 +1,65 @@
+.mfz {
+    position: absolute;
+    top: calc(20vh - 80px);
+    left: calc(50vw - 100px);
+    width: 200px;
+    height: 200px;
+    transform-origin: 50% 50%;
+    animation: rotate360 6s linear infinite;
+}
+
+
+.r1, .r2 {
+    border: solid 1px white;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.r1 {
+    width: 200px;
+    height: 200px;
+}
+
+.r2 {
+    width: 220px;
+    height: 220px;
+    top: -10px;
+    left: -10px;
+}
+
+.z1, .z2 {
+    border: solid 1px white;
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border: solid 1px white;
+    top: 30px;
+    left: 30px;
+}
+
+
+.z2 {
+    transform: rotate(45deg);
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.start {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
