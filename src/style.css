@@ -21,11 +21,14 @@ body {
 .start-h1 {
     color: white;
     margin-top: 20vh;
+    z-index: 1;
 }
 
 .start-btn {
+    display: none;
+    opacity: 0;
     margin-top: 30vh;
-    font-size: 3vmin;
+    font-size: 5vmin;
     padding: 30px;
     border-radius: 10px;
     color: white;
@@ -66,4 +69,71 @@ body {
     border-radius: 10px;
     background-color: rgb(95, 95, 95);
     border: none;
+    display: flex;
+    justify-content: space-evenly;
 }   
+
+
+.navbar button {
+    border: none;
+    font-size: 2.5vmin;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+.navbar button:hover {
+    font-size: 3vmin;
+}
+
+.基地 {
+    position: absolute;
+    width: 100vw;
+    height: 94vh;
+    top: 6vh;
+
+}
+
+.基地-金币 {
+    position: absolute;
+    min-width: 200px;
+    height: 35px;
+    top: 5vh;
+    left: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.8vmin;
+
+}
+
+.基地-炼金-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6vmin;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 2px rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    padding: 1px;
+    transition: padding 0.3s linear, background-size 0.1s linear;
+}
+
+.基地-炼金-btn:hover {
+    padding: 30px;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) left top no-repeat,
+    linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)) left top no-repeat,
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) right top no-repeat,
+    linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)) right top no-repeat,
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) left bottom no-repeat,
+    linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)) left bottom no-repeat,
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) right bottom no-repeat,
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) right bottom no-repeat;
+    background-size: 0.2vmin 2.5vmin, 2.5vmin 0.2vmin, 0.15vmin 2.5vmin, 2.5vmin 0.2vmin;
+}

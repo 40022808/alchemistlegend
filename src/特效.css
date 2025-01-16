@@ -10,7 +10,7 @@
 
 
 .r1, .r2 {
-    border: solid 1px white;
+    border: solid 2px white;
     border-radius: 100%;
     position: absolute;
 }
@@ -28,11 +28,10 @@
 }
 
 .z1, .z2 {
-    border: solid 1px white;
+    border: solid 2px white;
     position: absolute;
     width: 140px;
     height: 140px;
-    border: solid 1px white;
     top: 30px;
     left: 30px;
 }
@@ -41,6 +40,11 @@
 .z2 {
     transform: rotate(45deg);
 }
+
+.mfz:hover .r1, .mfz:hover .r2, .mfz:hover .z1, .mfz:hover .z2 {
+    animation: border-color-flow 6s linear infinite;
+}
+
 
 @keyframes rotate360 {
     from {
@@ -61,5 +65,29 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+/* 定义闪烁动画 */
+@keyframes blink {
+    0%, 100% { opacity: 1; } /* 开始和结束时完全不透明 */
+    50% { opacity: 0; } /* 中间时完全透明 */
+}
+
+@keyframes border-color-flow {
+    0% {
+        border-color: yellow;
+    }
+    25% {
+        border-color: blue;
+    }
+    50% {
+        border-color: red;
+    }
+    75% {
+        border-color: green;
+    }
+    100% {
+        border-color: yellow;
     }
 }
