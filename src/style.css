@@ -85,15 +85,15 @@ body {
     font-size: 3vmin;
 }
 
-.基地 {
+.炼金 {
     position: absolute;
     width: 100vw;
     height: 94vh;
     top: 6vh;
-
+    display: block;
 }
 
-.基地-金币 {
+.炼金-金币 {
     position: absolute;
     min-width: 200px;
     height: 35px;
@@ -111,7 +111,7 @@ body {
 
 }
 
-.基地-炼金-btn {
+.炼金-炼金-btn {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -125,7 +125,7 @@ body {
     transition: padding 0.3s linear, background-size 0.1s linear;
 }
 
-.基地-炼金-btn:hover {
+.炼金-炼金-btn:hover {
     padding: 30px;
     background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) left top no-repeat,
     linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)) left top no-repeat,
@@ -136,4 +136,117 @@ body {
     linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) right bottom no-repeat,
     linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) right bottom no-repeat;
     background-size: 0.2vmin 2.5vmin, 2.5vmin 0.2vmin, 0.15vmin 2.5vmin, 2.5vmin 0.2vmin;
+}
+
+.基地 {
+    position: absolute;
+    width: 100vw;
+    height: 94vh;
+    top: 6vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.基地-table {
+    width: 90vw;
+    height: 150px;
+    display: none;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    justify-content: space-evenly;
+}
+
+.基地-table.基地-table-start {
+    display: flex;
+}
+
+.基地-table button {
+    font-size: 6vmin;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 2px rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.基地-table button:hover {
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) left top no-repeat,
+    linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)) left top no-repeat,
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) right top no-repeat,
+    linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)) right top no-repeat,
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) left bottom no-repeat,
+    linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255)) left bottom no-repeat,
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) right bottom no-repeat,
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) right bottom no-repeat;
+    background-size: 0.2vmin 2.5vmin, 2.5vmin 0.2vmin, 0.15vmin 2.5vmin, 2.5vmin 0.2vmin;
+}
+
+.基地-table-升级-信息 {
+    position: absolute;
+    width: 50vw;
+    height: 15vh;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(146, 146, 146);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vmin;
+}
+
+.弹窗 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+
+}
+
+.弹窗_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 35vh;
+    height: 30vh;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5vmin;
+    border-radius: 1vmin;
+}
+
+
+.弹窗_text {
+    background-color: #fff;
+    width: 50vw;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 4vmin;
+    text-align: center;
+    
+}
+
+
+.弹窗_关闭 {
+    color: black;
+    background-color: aqua;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2vmin;
 }

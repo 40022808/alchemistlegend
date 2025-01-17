@@ -10,6 +10,10 @@
   </head>
   <body>
 
+    <audio id="按钮1" src="素材库/音效和bgm/按钮1.mp3" type="mp3" preload="metadata"></audio>
+    <audio id="按钮2" src="素材库/音效和bgm/按钮2.mp3" type="mp3" preload="metadata"></audio>
+    <audio id="error1" src="素材库/音效和bgm/error1.mp3" type="mp3" preload="metadata"></audio>
+
     <div class="start">
 
       <div class="mfz">
@@ -29,17 +33,39 @@
 
     <div class="game">
       <div class="navbar">
+        <button class="navbar-炼金-btn">炼金</button>
         <button class="navbar-基地-btn">基地</button>
       </div>
 
+      <div class="炼金">
+        <div class="炼金-金币">金币数量:0</div>
+        <button class="炼金-炼金-btn">炼金</button>
+      </div>
+
       <div class="基地">
-        <div class="基地-金币">金币数量:0</div>
-        <button class="基地-炼金-btn">炼金</button>
+        <div class="基地-table 基地-table-start">
+          <button class="基地-仓库-btn">仓库</button>
+          <button class="基地-升级-btn">升级</button>
+          <button class="基地-建筑-btn">建筑</button>
+        </div>
+
+        <div class="基地-table 基地-table-升级">
+          <div class="基地-table-升级-信息"></div>
+          <button class="升级炼金设备-btn">升级炼金设备</button>
+        </div>
       </div>
 
     </div>
 
 
+    <div class="弹窗">
+      <div class="弹窗_box">
+          <div class="弹窗_text">
+              弹窗功能出错!
+          </div>
+          <button class="弹窗_关闭">关闭</button>
+      </div>
+  </div>
 
 
 
