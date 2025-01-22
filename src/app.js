@@ -13,7 +13,15 @@ export const doc ={
     "基地-table-start":document.querySelector(".基地-table.基地-table-start"),
     "基地-table-升级":document.querySelector(".基地-table.基地-table-升级"),
     "基地-table-升级-信息":document.querySelector(".基地-table-升级-信息"),
-    "升级炼金设备-btn":document.querySelector(".升级炼金设备-btn"),
+    "升级炼金设备-btn":document.querySelector("#升级炼金设备-btn"),
+    "基地-table-升级-btn":document.querySelectorAll(".基地-table-升级-btn"),
+    "基地-table-升级-btn-back":document.querySelector(".基地-table-升级-btn-back"),
+    "基地-table-升级-btn-next":document.querySelector(".基地-table-升级-btn-next"),
+    "炼金-黄金自动生产机":document.querySelector(".炼金-黄金自动生产机"),
+    "炼金-黄金自动生产机-start-btn":document.querySelector(".炼金-黄金自动生产机-start-btn"),
+    "炼金-黄金自动生产机-stop-btn":document.querySelector(".炼金-黄金自动生产机-stop-btn"),
+    "黄金自动生产机-btn":document.querySelector("#黄金自动生产机-btn"),
+    "炼金-黄金自动生产机-进度条-进度":document.querySelector(".炼金-黄金自动生产机-进度条-进度"),
 }
 
 export const music = {
@@ -26,11 +34,13 @@ export const music = {
 
 import { 
     慢慢消失,慢慢出现, 基地_升级_btn_click, play音效, navbar_炼金_btn_click, navbar_基地_btn_click, 基地_升级_信息_刷新, 升级炼金设备_btn_click,
-    弹窗_关闭_函数
+    弹窗_关闭_函数, 基地_table_btn_back_click, 基地_table_btn_next_click, 初始化, 黄金自动生产机_btn_click, 炼金_黄金自动生产机_start_btn_click,
+    炼金_黄金自动生产机_stop_btn_click
 } from "./函数库.js";
 import { 金币, 更新金币, 基地_升级 } from "./变量.js";
 
 
+初始化()
 
 setTimeout(() => {
     doc["start-btn"].style.display = "block";
@@ -89,3 +99,23 @@ doc["基地-升级-btn"].addEventListener("click",()=>{
 doc["升级炼金设备-btn"].addEventListener("click",()=>{
     升级炼金设备_btn_click()
 })
+
+doc["基地-table-升级-btn-back"].addEventListener("click",()=>{
+    基地_table_btn_back_click()
+})
+
+doc["基地-table-升级-btn-next"].addEventListener("click",()=>{
+    基地_table_btn_next_click()
+})
+
+doc["炼金-黄金自动生产机-start-btn"].addEventListener("click",()=>[
+    炼金_黄金自动生产机_start_btn_click()
+])
+
+doc["炼金-黄金自动生产机-stop-btn"].addEventListener("click",()=>[
+    炼金_黄金自动生产机_stop_btn_click()
+])
+
+doc["黄金自动生产机-btn"].addEventListener("click",()=>[
+    黄金自动生产机_btn_click()
+])

@@ -96,18 +96,19 @@ body {
 .炼金-金币 {
     position: absolute;
     min-width: 200px;
-    height: 35px;
     top: 5vh;
     left: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     transform: translateX(-50%);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(146, 146, 146);
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 1.8vmin;
+    font-size: 2.5vmin;
 
 }
 
@@ -183,6 +184,17 @@ body {
     background-size: 0.2vmin 2.5vmin, 2.5vmin 0.2vmin, 0.15vmin 2.5vmin, 2.5vmin 0.2vmin;
 }
 
+
+.基地-table-升级-btn  {
+    display: none;
+}
+
+.基地-table-升级-btn.显示 {
+    display: block;
+}
+
+
+
 .基地-table-升级-信息 {
     position: absolute;
     width: 50vw;
@@ -193,7 +205,7 @@ body {
     background-color: rgb(146, 146, 146);
     border-radius: 20px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 2vmin;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,4 +261,57 @@ body {
     cursor: pointer;
     border-radius: 5px;
     padding: 2vmin;
+}
+
+.炼金-黄金自动生产机 {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(95, 95, 95);
+    width: 60vw;
+    height: 5vh;
+    border-radius: 10px;
+    padding: 15px;
+    display: none;
+    align-items: center;
+
+
+}
+
+.炼金-黄金自动生产机-进度条 {
+    border: solid 1px black;
+    border-radius: 10px;
+    width: 40vw;
+    height: 5vh;
+    margin-right: 10px;
+    flex: 3;
+}
+
+.炼金-黄金自动生产机-进度条-进度 {
+    background-color: rgb(177, 177, 177);
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+}
+
+.炼金-黄金自动生产机-start-btn , .炼金-黄金自动生产机-stop-btn {
+    flex: 1;
+    font-size: 2.5vmin;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.炼金-黄金自动生产机-start-btn {
+    margin-right: 10px;
+    background-color: rgb(81, 255, 0);
+}
+
+.炼金-黄金自动生产机-stop-btn {
+    background-color: red;
+}
+
+.炼金-黄金自动生产机-start-btn:hover , .炼金-黄金自动生产机-stop-btn:hover {
+    border: solid 1px black;
 }

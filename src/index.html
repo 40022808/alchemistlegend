@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <audio id="按钮1" src="素材库/音效和bgm/按钮1.mp3" type="mp3" preload="metadata"></audio>
+    <audio id="按钮1" src="素材库/音效和bgm/按钮1.mp3" type="mp3" preload="auto"></audio>
     <audio id="按钮2" src="素材库/音效和bgm/按钮2.mp3" type="mp3" preload="metadata"></audio>
     <audio id="error1" src="素材库/音效和bgm/error1.mp3" type="mp3" preload="metadata"></audio>
 
@@ -40,6 +40,13 @@
       <div class="炼金">
         <div class="炼金-金币">金币数量:0</div>
         <button class="炼金-炼金-btn">炼金</button>
+        <div class="炼金-黄金自动生产机">
+          <div class="炼金-黄金自动生产机-进度条">
+            <div class="炼金-黄金自动生产机-进度条-进度"></div>
+          </div>
+          <button class="炼金-黄金自动生产机-start-btn">开启</button>
+          <button class="炼金-黄金自动生产机-stop-btn">关闭</button>
+        </div>
       </div>
 
       <div class="基地">
@@ -51,7 +58,10 @@
 
         <div class="基地-table 基地-table-升级">
           <div class="基地-table-升级-信息"></div>
-          <button class="升级炼金设备-btn">升级炼金设备</button>
+          <button class="基地-table-升级-btn-back"><</button>
+          <button class="基地-table-升级-btn 显示" id="升级炼金设备-btn">升级炼金设备</button>
+          <button class="基地-table-升级-btn" id="黄金自动生产机-btn">黄金自动生产机</button>
+          <button class="基地-table-升级-btn-next">></button>
         </div>
       </div>
 
