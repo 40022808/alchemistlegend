@@ -315,3 +315,11 @@ body {
 .炼金-黄金自动生产机-start-btn:hover , .炼金-黄金自动生产机-stop-btn:hover {
     border: solid 1px black;
 }
+
+.基地-table-升级-返回-btn {
+    position: absolute;
+    bottom: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5vmin;
+}

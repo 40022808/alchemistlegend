@@ -1,5 +1,7 @@
 import { doc,music } from "./app.js";
 import { 基地_升级, 金币, 更新金币, 更新基地_升级 } from "./变量.js";
+import { 炼金_黄金自动生产机_进度特效, 炼金_黄金自动生产机_进度特效_stop } from "./特效.js";
+
 
 export function play音效(audioElement) {
     const newAudio = audioElement.cloneNode();
@@ -45,7 +47,7 @@ export function 慢慢出现(name,time,display) {
 
 }
 
-export function 初始化() {
+export function ui更新() {
     if (基地_升级.黄金自动生产机 !== 0) {
         doc["炼金-黄金自动生产机"].style.display = "flex";
     }
@@ -54,7 +56,7 @@ export function 初始化() {
 
 export function navbar_炼金_btn_click() {
     play音效(music.按钮2)
-    初始化()
+    ui更新()
     doc.炼金.style.display = "block";
     doc.基地.style.display = "none";
 }
@@ -69,6 +71,13 @@ export function navbar_基地_btn_click() {
     doc["基地-table-start"].style.display = "flex";
 }
 
+export function 基地_table_升级_返回_btn_click() {
+    play音效(music.按钮2)
+    慢慢消失(doc["基地-table-升级"], 200)
+    setTimeout(() => {
+        慢慢出现(doc["基地-table-start"], 500, "flex")
+    }, 200);
+}
 
 export function 基地_升级_btn_click() {
     play音效(music.按钮2)
@@ -155,24 +164,14 @@ export function 基地_table_btn_next_click() {
 
 
 
-var intervalId = null; // 用于存储setInterval的ID
+
 
 export function 炼金_黄金自动生产机_start_btn_click() {
     play音效(music.按钮2)
-    // 清除之前的interval，防止重复
-    clearInterval(intervalId);
-    
-    // 每隔3秒增加targetValue
-    intervalId = setInterval(() => {
-        金币.数量 = 金币.数量 + 基地_升级.黄金自动生产机;
-        更新金币()
-    }, 3000);
-
+    炼金_黄金自动生产机_进度特效()
 }
 
 export function 炼金_黄金自动生产机_stop_btn_click() {
     play音效(music.按钮2)
-    // 清除interval，停止增加
-    clearInterval(intervalId);
-
+    炼金_黄金自动生产机_进度特效_stop()
 }
