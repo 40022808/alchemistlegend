@@ -3,8 +3,9 @@ import { 基地_升级, 金币, 更新金币, 更新基地_升级 } from "./变�
 import { 炼金_黄金自动生产机_进度特效, 炼金_黄金自动生产机_进度特效_stop } from "./特效.js";
 
 
-export function play音效(audioElement) {
+export function play音效(audioElement,volume) {
     const newAudio = audioElement.cloneNode();
+    newAudio.volume = volume || 1;
     newAudio.play();
 }
 

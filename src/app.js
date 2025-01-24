@@ -23,13 +23,19 @@ export const doc ={
     "黄金自动生产机-btn":document.querySelector("#黄金自动生产机-btn"),
     "炼金-黄金自动生产机-进度条-进度":document.querySelector(".炼金-黄金自动生产机-进度条-进度"),
     "基地-table-升级-返回-btn":document.querySelector(".基地-table-升级-返回-btn"),
+    "version":document.querySelector(".version"),
 }
 
 export const music = {
     "按钮1": document.querySelector("#按钮1"),
     "按钮2": document.querySelector("#按钮2"),
     "error1": document.querySelector("#error1"),
+    "金币1": document.querySelector("#金币1"),
 }
+
+    const version = "版本: 0.1.0"
+    console.log(`%c%s`, "color: #fff; background: #000; padding: 5px 10px; border-radius: 5px;", `版本: ${version}`)
+    doc.version.innerHTML = version
 
 
 
