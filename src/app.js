@@ -33,8 +33,8 @@ export const music = {
     "金币1": document.querySelector("#金币1"),
 }
 
-    const version = "版本: 0.1.0"
-    console.log(`%c%s`, "color: #fff; background: #000; padding: 5px 10px; border-radius: 5px;", `版本: ${version}`)
+    const version = "版本: 0.1.1"
+    console.log(`%c%s`, "color: #fff; background: #000; padding: 5px 10px; border-radius: 5px;", `${version}`)
     doc.version.innerHTML = version
 
 

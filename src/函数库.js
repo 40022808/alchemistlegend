@@ -59,13 +59,17 @@ export function navbar_炼金_btn_click() {
     play音效(music.按钮2)
     ui更新()
     doc.炼金.style.display = "block";
+    doc["navbar-炼金-btn"].style.borderBottom = 'solid 5px rgb(255, 238, 0)'
     doc.基地.style.display = "none";
+    doc["navbar-基地-btn"].style.borderBottom = 'none'
 }
 
 export function navbar_基地_btn_click() {
     play音效(music.按钮2)
     doc.炼金.style.display = "none";
+    doc["navbar-炼金-btn"].style.borderBottom = 'none'
     doc.基地.style.display = "flex";
+    doc["navbar-基地-btn"].style.borderBottom = 'solid 5px rgb(255, 238, 0)'
     doc["基地-table"].forEach(element => {
         element.style.display = "none";
     });
