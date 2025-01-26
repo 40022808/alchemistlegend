@@ -54,26 +54,43 @@ export function ui更新() {
     }
 }
 
+function navbar_btn_函数(btn,block,display) {
+    doc["navbar-基地-btn"].style.borderBottom = 'none';
+    doc["navbar-炼金-btn"].style.borderBottom = 'none';
+    doc["navbar-冒险-btn"].style.borderBottom = 'none';
+    doc["navbar-设置-btn"].style.borderBottom = 'none';
+    doc.基地.style.display = "none";
+    doc.炼金.style.display = "none";
+    doc.冒险.style.display = "none";
+    doc.设置.style.display = "none";
+    block.style.display = display;
+    btn.style.borderBottom = 'solid 5px rgb(255, 238, 0)'
+}
+
 
 export function navbar_炼金_btn_click() {
     play音效(music.按钮2)
     ui更新()
-    doc.炼金.style.display = "block";
-    doc["navbar-炼金-btn"].style.borderBottom = 'solid 5px rgb(255, 238, 0)'
-    doc.基地.style.display = "none";
-    doc["navbar-基地-btn"].style.borderBottom = 'none'
+    navbar_btn_函数(doc["navbar-炼金-btn"],doc.炼金,"block")
 }
 
 export function navbar_基地_btn_click() {
     play音效(music.按钮2)
-    doc.炼金.style.display = "none";
-    doc["navbar-炼金-btn"].style.borderBottom = 'none'
-    doc.基地.style.display = "flex";
-    doc["navbar-基地-btn"].style.borderBottom = 'solid 5px rgb(255, 238, 0)'
+    navbar_btn_函数(doc["navbar-基地-btn"],doc.基地,"flex")
     doc["基地-table"].forEach(element => {
         element.style.display = "none";
     });
     doc["基地-table-start"].style.display = "flex";
+}
+
+export function navbar_冒险_btn_click() {
+    play音效(music.按钮2)
+    navbar_btn_函数(doc["navbar-冒险-btn"],doc.冒险,"flex")
+}
+
+export function navbar_设置_btn_click() {
+    play音效(music.按钮2)
+    navbar_btn_函数(doc["navbar-设置-btn"],doc.设置,"flex")
 }
 
 export function 基地_table_升级_返回_btn_click() {

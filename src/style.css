@@ -224,6 +224,27 @@ body {
     font-size: 2vmin;
 }
 
+.冒险 {
+    position: absolute;
+    width: 100vw;
+    height: 94vh;
+    top: 6vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.设置 {
+    position: absolute;
+    width: 100vw;
+    height: 94vh;
+    top: 6vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .弹窗 {
     display: none;
     flex-direction: column;
@@ -305,6 +326,20 @@ body {
     height: 100%;
     width: 0%;
     border-radius: 10px;
+}
+
+.炼金-黄金自动生产机-进度条-name {
+    position: absolute;
+    left: 29%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: gold;
+    font-size: 2.5vmin;
+    text-shadow: 
+        -0.1vmin -0.1vmin 0 black,
+        0.1vmin -0.1vmin 0 black,
+        -0.1vmin 0.1vmin 0 black,
+        0.1vmin 0.1vmin 0 black; 
 }
 
 .炼金-黄金自动生产机-start-btn , .炼金-黄金自动生产机-stop-btn {

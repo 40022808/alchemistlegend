@@ -24,6 +24,10 @@ export const doc ={
     "炼金-黄金自动生产机-进度条-进度":document.querySelector(".炼金-黄金自动生产机-进度条-进度"),
     "基地-table-升级-返回-btn":document.querySelector(".基地-table-升级-返回-btn"),
     "version":document.querySelector(".version"),
+    "冒险":document.querySelector(".冒险"),
+    "设置":document.querySelector(".设置"),
+    "navbar-冒险-btn":document.querySelector(".navbar-冒险-btn"),
+    "navbar-设置-btn":document.querySelector(".navbar-设置-btn"),
 }
 
 export const music = {
@@ -33,7 +37,7 @@ export const music = {
     "金币1": document.querySelector("#金币1"),
 }
 
-    const version = "版本: 0.1.1"
+    const version = "版本: 0.1.2"
     console.log(`%c%s`, "color: #fff; background: #000; padding: 5px 10px; border-radius: 5px;", `${version}`)
     doc.version.innerHTML = version
 
@@ -42,7 +46,7 @@ export const music = {
 import { 
     慢慢消失,慢慢出现, 基地_升级_btn_click, play音效, navbar_炼金_btn_click, navbar_基地_btn_click, 基地_升级_信息_刷新, 升级炼金设备_btn_click,
     弹窗_关闭_函数, 基地_table_btn_back_click, 基地_table_btn_next_click, ui更新, 黄金自动生产机_btn_click, 炼金_黄金自动生产机_start_btn_click,
-    炼金_黄金自动生产机_stop_btn_click, 基地_table_升级_返回_btn_click
+    炼金_黄金自动生产机_stop_btn_click, 基地_table_升级_返回_btn_click, navbar_冒险_btn_click, navbar_设置_btn_click
 } from "./函数库.js";
 import { 金币, 更新金币, 基地_升级 } from "./变量.js";
 
@@ -96,6 +100,14 @@ doc["navbar-炼金-btn"].addEventListener("click",()=>{
 
 doc["navbar-基地-btn"].addEventListener("click",()=>{
     navbar_基地_btn_click()
+})
+
+doc["navbar-冒险-btn"].addEventListener("click",()=>{
+    navbar_冒险_btn_click()
+})
+
+doc["navbar-设置-btn"].addEventListener("click",()=>{
+    navbar_设置_btn_click()
 })
 
 doc["基地-table-升级-返回-btn"].addEventListener("click",()=>{
