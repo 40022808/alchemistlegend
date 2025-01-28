@@ -21,7 +21,26 @@ export function 弹窗_关闭_函数() {
     弹窗.style.display = 'none';
 }
 
+export function 确认弹窗(text,fun) {
+    const 弹窗 = document.querySelector('.确认弹窗')
+    弹窗.style.display = 'flex';
+    const 弹窗_text = document.querySelector('.确认弹窗_text')
+    弹窗_text.innerHTML = text
+    确认弹窗fun = fun
+}
 
+var 确认弹窗fun
+
+export function 确认弹窗_取消_函数() {
+    const 弹窗 = document.querySelector('.确认弹窗')
+    弹窗.style.display = 'none';
+}
+
+export function 确认弹窗_确定_函数() {
+    确认弹窗fun()
+    const 弹窗 = document.querySelector('.确认弹窗')
+    弹窗.style.display = 'none';
+}
 
 export function 慢慢消失(name,time) {
     name.style.transition = `opacity ${time}ms linear`;
@@ -67,6 +86,10 @@ function navbar_btn_函数(btn,block,display) {
     btn.style.borderBottom = 'solid 5px rgb(255, 238, 0)'
 }
 
+export function 删除数据() {
+    localStorage.clear();
+    location.reload();
+}
 
 export function navbar_炼金_btn_click() {
     play音效(music.按钮2)

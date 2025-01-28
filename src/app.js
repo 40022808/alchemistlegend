@@ -28,6 +28,7 @@ export const doc ={
     "设置":document.querySelector(".设置"),
     "navbar-冒险-btn":document.querySelector(".navbar-冒险-btn"),
     "navbar-设置-btn":document.querySelector(".navbar-设置-btn"),
+    "设置-删除数据-btn":document.querySelector(".设置-删除数据-btn"),
 }
 
 export const music = {
@@ -37,7 +38,7 @@ export const music = {
     "金币1": document.querySelector("#金币1"),
 }
 
-    const version = "版本: 0.1.3"
+    const version = "版本: 0.1.4"
     console.log(`%c%s`, "color: #fff; background: #000; padding: 5px 10px; border-radius: 5px;", `${version}`)
     doc.version.innerHTML = version
 
@@ -46,7 +47,8 @@ export const music = {
 import { 
     慢慢消失,慢慢出现, 基地_升级_btn_click, play音效, navbar_炼金_btn_click, navbar_基地_btn_click, 基地_升级_信息_刷新, 升级炼金设备_btn_click,
     弹窗_关闭_函数, 基地_table_btn_back_click, 基地_table_btn_next_click, ui更新, 黄金自动生产机_btn_click, 炼金_黄金自动生产机_start_btn_click,
-    炼金_黄金自动生产机_stop_btn_click, 基地_table_升级_返回_btn_click, navbar_冒险_btn_click, navbar_设置_btn_click
+    炼金_黄金自动生产机_stop_btn_click, 基地_table_升级_返回_btn_click, navbar_冒险_btn_click, navbar_设置_btn_click, 确认弹窗, 确认弹窗_取消_函数,
+    确认弹窗_确定_函数, 删除数据
 } from "./函数库.js";
 import { 金币, 更新金币, 基地_升级 } from "./变量.js";
 
@@ -85,6 +87,18 @@ doc["start-btn"].addEventListener("click",()=>{
 const 弹窗_关闭 = document.querySelector('.弹窗_关闭')
 弹窗_关闭.addEventListener('click',()=>{
     弹窗_关闭_函数()
+    play音效(music.按钮2)
+})
+
+const 确认弹窗_取消 = document.querySelector('.确认弹窗_取消')
+确认弹窗_取消.addEventListener('click',()=>{
+    确认弹窗_取消_函数()
+    play音效(music.按钮2)
+})
+
+const 确认弹窗_确认 = document.querySelector('.确认弹窗_确认')
+确认弹窗_确认.addEventListener('click',()=>{
+    确认弹窗_确定_函数()
     play音效(music.按钮2)
 })
 
@@ -141,4 +155,8 @@ doc["炼金-黄金自动生产机-stop-btn"].addEventListener("click",()=>[
 
 doc["黄金自动生产机-btn"].addEventListener("click",()=>[
     黄金自动生产机_btn_click()
+])
+
+doc["设置-删除数据-btn"].addEventListener("click",()=>[
+    确认弹窗("删除数据后无法恢复,是否删除数据?",删除数据)
 ])

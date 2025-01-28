@@ -306,27 +306,101 @@ body {
     top: 35vh;
     height: 30vh;
     justify-content: space-between;
-    background-color: white;
+    background-color: rgb(31, 31, 31);
     padding: 5vmin;
     border-radius: 1vmin;
 }
 
 
 .弹窗_text {
-    background-color: #fff;
+    background-color: rgb(91, 91, 91);
     width: 50vw;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     font-size: 4vmin;
     text-align: center;
-    
+    color: white;
+    text-shadow: 
+        -0.2vmin -0.2vmin 0 black,
+        0.2vmin -0.2vmin 0 black,
+        -0.2vmin 0.2vmin 0 black,
+        0.2vmin 0.2vmin 0 black;
 }
 
 
 .弹窗_关闭 {
     color: black;
     background-color: aqua;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2vmin;
+}
+
+.确认弹窗 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.确认弹窗_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 35vh;
+    height: 30vh;
+    justify-content: space-between;
+    background-color: rgb(31, 31, 31);
+    padding: 5vmin;
+    border-radius: 1vmin;
+}
+
+.确认弹窗_text {
+    background-color: rgb(91, 91, 91);
+    width: 50vw;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 4vmin;
+    text-align: center;
+    color: white;
+    text-shadow: 
+        -0.2vmin -0.2vmin 0 black,
+        0.2vmin -0.2vmin 0 black,
+        -0.2vmin 0.2vmin 0 black,
+        0.2vmin 0.2vmin 0 black;
+}
+
+.确认弹窗_button {
+    display: flex;
+}
+
+.确认弹窗_取消 {
+    color: black;
+    background-color: rgb(255, 0, 0);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2vmin;
+    margin-right: 10vw;
+}
+
+.确认弹窗_确认 {
+    color: black;
+    background-color: rgb(30, 255, 0);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -352,12 +426,15 @@ body {
 }
 
 .炼金-黄金自动生产机-进度条 {
+    position: relative;
     border: solid 1px black;
     border-radius: 10px;
     width: 40vw;
     height: 5vh;
     margin-right: 10px;
     flex: 3;
+    
+
 }
 
 .炼金-黄金自动生产机-进度条-进度 {
@@ -369,9 +446,9 @@ body {
 
 .炼金-黄金自动生产机-进度条-name {
     position: absolute;
-    left: 29%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: gold;
     font-size: 2.5vmin;
     text-shadow: 
