@@ -94,7 +94,12 @@ body {
 }
 
 .navbar button:hover {
-    font-size: 3.5vmin;
+    color: black;
+    text-shadow: 
+    -0.1vmin -0.1vmin 0 rgb(255, 255, 255),
+    0.1vmin -0.1vmin 0 rgb(255, 255, 255),
+    -0.1vmin 0.1vmin 0 rgb(255, 255, 255),
+    0.1vmin 0.1vmin 0 rgb(255, 255, 255); 
 }
 
 .炼金 {
