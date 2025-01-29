@@ -143,7 +143,7 @@ export function 基地_升级_信息_刷新() {
         [升级炼金设备]<br>
         每提升一级，炼金的收益+1<br>
         目前等级：${基地_升级.升级炼金设备}<br>
-        需要金币：${(基地_升级.升级炼金设备 + 1) * (60 * (基地_升级.升级炼金设备 + 1))}<br>
+        需要金币：${(基地_升级.升级炼金设备 + 1) * (30 * (基地_升级.升级炼金设备 + 1))}<br>
         目前金币：${金币.数量}
         `
     }
@@ -160,12 +160,12 @@ export function 基地_升级_信息_刷新() {
 }
 
 export function 升级炼金设备_btn_click() {
-    if (金币.数量 < (基地_升级.升级炼金设备 + 1) * (60 * (基地_升级.升级炼金设备 + 1))) {
+    if (金币.数量 < (基地_升级.升级炼金设备 + 1) * (30 * (基地_升级.升级炼金设备 + 1))) {
         play音效(music.error1)
         弹窗("金币不足！")
     }
     else {
-        金币.数量 = 金币.数量 - (基地_升级.升级炼金设备 + 1) * (60 * (基地_升级.升级炼金设备 + 1));
+        金币.数量 = 金币.数量 - (基地_升级.升级炼金设备 + 1) * (30 * (基地_升级.升级炼金设备 + 1));
         基地_升级.升级炼金设备 = 基地_升级.升级炼金设备 + 1;
         基地_升级_信息_刷新();
         更新金币()
@@ -191,19 +191,19 @@ export function 黄金自动生产机_btn_click() {
 }
 
 
-var currentIndex = 0; // 定义在全局作用域
+var 基地_升级_信息_变量 = 0; // 定义在全局作用域
 export function 基地_table_btn_back_click() {
     play音效(music.按钮2)
-    doc["基地-table-升级-btn"][currentIndex].classList.remove('显示');
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : doc["基地-table-升级-btn"].length - 1;
-    doc["基地-table-升级-btn"][currentIndex].classList.add('显示');
+    doc["基地-table-升级-btn"][基地_升级_信息_变量].classList.remove('显示');
+    基地_升级_信息_变量 = (基地_升级_信息_变量 > 0) ? 基地_升级_信息_变量 - 1 : doc["基地-table-升级-btn"].length - 1;
+    doc["基地-table-升级-btn"][基地_升级_信息_变量].classList.add('显示');
     基地_升级_信息_刷新()
 }
 export function 基地_table_btn_next_click() {
     play音效(music.按钮2)
-    doc["基地-table-升级-btn"][currentIndex].classList.remove('显示');
-    currentIndex = (currentIndex < doc["基地-table-升级-btn"].length - 1) ? currentIndex + 1 : 0;
-    doc["基地-table-升级-btn"][currentIndex].classList.add('显示');
+    doc["基地-table-升级-btn"][基地_升级_信息_变量].classList.remove('显示');
+    基地_升级_信息_变量 = (基地_升级_信息_变量 < doc["基地-table-升级-btn"].length - 1) ? 基地_升级_信息_变量 + 1 : 0;
+    doc["基地-table-升级-btn"][基地_升级_信息_变量].classList.add('显示');
     基地_升级_信息_刷新()
 }
 

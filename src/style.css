@@ -86,7 +86,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border-radius: 2px;
-    transition: all 0.1s linear;
+    transition: all 0.2s linear;
 }
 
 #navbar-炼金-btn {
@@ -94,12 +94,12 @@ body {
 }
 
 .navbar button:hover {
-    color: black;
+    color: rgb(0, 0, 0);
     text-shadow: 
-    -0.1vmin -0.1vmin 0 rgb(255, 255, 255),
-    0.1vmin -0.1vmin 0 rgb(255, 255, 255),
-    -0.1vmin 0.1vmin 0 rgb(255, 255, 255),
-    0.1vmin 0.1vmin 0 rgb(255, 255, 255); 
+    -0.1vmin -0.1vmin 0 rgb(165, 165, 165),
+    0.1vmin -0.1vmin 0 rgb(165, 165, 165),
+    -0.1vmin 0.1vmin 0 rgb(165, 165, 165),
+    0.1vmin 0.1vmin 0 rgb(165, 165, 165); 
 }
 
 .炼金 {

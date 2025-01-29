@@ -38,7 +38,7 @@ export const music = {
     "金币1": document.querySelector("#金币1"),
 }
 
-    const version = "版本: 0.1.4"
+    const version = "版本: 0.1.5"
     console.log(`%c%s`, "color: #fff; background: #000; padding: 5px 10px; border-radius: 5px;", `${version}`)
     doc.version.innerHTML = version
 
@@ -158,5 +158,6 @@ doc["黄金自动生产机-btn"].addEventListener("click",()=>[
 ])
 
 doc["设置-删除数据-btn"].addEventListener("click",()=>[
+    play音效(music.按钮2),
     确认弹窗("删除数据后无法恢复,是否删除数据?",删除数据)
 ])
