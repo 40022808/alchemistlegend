@@ -137,7 +137,7 @@ export function 基地_升级_btn_click() {
 
 
 export function 基地_升级_信息_刷新() {
-    if (currentIndex == 0) {
+    if (基地_升级_信息_变量  == 0) {
         doc["基地-table-升级-信息"].innerHTML = 
         `
         [升级炼金设备]<br>
@@ -147,7 +147,7 @@ export function 基地_升级_信息_刷新() {
         目前金币：${金币.数量}
         `
     }
-    else if (currentIndex == 1) {
+    else if (基地_升级_信息_变量  == 1) {
         doc["基地-table-升级-信息"].innerHTML = 
         `
         [黄金自动生产机]<br>
