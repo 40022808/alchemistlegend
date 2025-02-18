@@ -1,6 +1,6 @@
 import { doc,music } from "./app.js";
 import { 基地_升级, 金币, 更新金币, 更新基地_升级 } from "./变量.js";
-import { 炼金_黄金自动生产机_进度特效, 炼金_黄金自动生产机_进度特效_stop } from "./特效.js";
+import { 炼金_黄金自动生产机_进度特效, 炼金_黄金自动生产机_进度特效_stop, 慢慢消失, 慢慢出现 } from "./特效.js";
 
 
 export function play音效(audioElement,volume) {
@@ -42,30 +42,7 @@ export function 确认弹窗_确定_函数() {
     弹窗.style.display = 'none';
 }
 
-export function 慢慢消失(name,time) {
-    name.style.transition = `opacity ${time}ms linear`;
-    name.style.opacity = 0;
-    setTimeout(() => {
-        name.style.transition = 'none';
-        name.style.display = "none";
-        name.style.opacity = 1;
-    }, time);
 
-}
-
-export function 慢慢出现(name,time,display) {
-    name.style.opacity = 0;
-    name.style.display = display;
-    name.style.transition = `opacity ${time}ms linear`;
-    setTimeout(() => {
-        name.style.opacity = 1;
-    }, 100);
-    let time2 = time + 100;
-    setTimeout(() => {
-        name.style.transition = 'none';
-    }, time2);
-
-}
 
 export function ui更新() {
     if (基地_升级.黄金自动生产机 !== 0) {
@@ -192,19 +169,49 @@ export function 黄金自动生产机_btn_click() {
 
 
 var 基地_升级_信息_变量 = 0; // 定义在全局作用域
+document.addEventListener('DOMContentLoaded', () => {
+    const firstBtn = doc["基地-table-升级-btn"][基地_升级_信息_变量];
+    firstBtn.classList.add('显示');
+});
+
 export function 基地_table_btn_back_click() {
-    play音效(music.按钮2)
-    doc["基地-table-升级-btn"][基地_升级_信息_变量].classList.remove('显示');
-    基地_升级_信息_变量 = (基地_升级_信息_变量 > 0) ? 基地_升级_信息_变量 - 1 : doc["基地-table-升级-btn"].length - 1;
-    doc["基地-table-升级-btn"][基地_升级_信息_变量].classList.add('显示');
-    基地_升级_信息_刷新()
+    play音效(music.按钮2);
+    const currentBtn = doc["基地-table-升级-btn"][基地_升级_信息_变量];
+    currentBtn.classList.remove('显示');
+    currentBtn.classList.add('slide-out-left');
+    setTimeout(() => {
+        currentBtn.style.display = 'none';
+        currentBtn.classList.remove('slide-out-left');
+        基地_升级_信息_变量 = (基地_升级_信息_变量 > 0) ? 基地_升级_信息_变量 - 1 : doc["基地-table-升级-btn"].length - 1;
+        const nextBtn = doc["基地-table-升级-btn"][基地_升级_信息_变量];
+        nextBtn.style.display = 'block';
+        nextBtn.classList.add('slide-in-right');
+        setTimeout(() => {
+            nextBtn.classList.remove('slide-in-right');
+            nextBtn.classList.add('显示');
+            基地_升级_信息_刷新();
+        }, 500); // 确保动画完成后再添加显示类
+    }, 500); // 等待动画完成
 }
+
 export function 基地_table_btn_next_click() {
-    play音效(music.按钮2)
-    doc["基地-table-升级-btn"][基地_升级_信息_变量].classList.remove('显示');
-    基地_升级_信息_变量 = (基地_升级_信息_变量 < doc["基地-table-升级-btn"].length - 1) ? 基地_升级_信息_变量 + 1 : 0;
-    doc["基地-table-升级-btn"][基地_升级_信息_变量].classList.add('显示');
-    基地_升级_信息_刷新()
+    play音效(music.按钮2);
+    const currentBtn = doc["基地-table-升级-btn"][基地_升级_信息_变量];
+    currentBtn.classList.remove('显示');
+    currentBtn.classList.add('slide-out-left');
+    setTimeout(() => {
+        currentBtn.style.display = 'none';
+        currentBtn.classList.remove('slide-out-left');
+        基地_升级_信息_变量 = (基地_升级_信息_变量 < doc["基地-table-升级-btn"].length - 1) ? 基地_升级_信息_变量 + 1 : 0;
+        const nextBtn = doc["基地-table-升级-btn"][基地_升级_信息_变量];
+        nextBtn.style.display = 'block';
+        nextBtn.classList.add('slide-in-right');
+        setTimeout(() => {
+            nextBtn.classList.remove('slide-in-right');
+            nextBtn.classList.add('显示');
+            基地_升级_信息_刷新();
+        }, 500); // 确保动画完成后再添加显示类
+    }, 500); // 等待动画完成
 }
 
 

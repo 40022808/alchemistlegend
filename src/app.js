@@ -45,12 +45,13 @@ export const music = {
 
 
 import { 
-    慢慢消失,慢慢出现, 基地_升级_btn_click, play音效, navbar_炼金_btn_click, navbar_基地_btn_click, 基地_升级_信息_刷新, 升级炼金设备_btn_click,
+    基地_升级_btn_click, play音效, navbar_炼金_btn_click, navbar_基地_btn_click, 基地_升级_信息_刷新, 升级炼金设备_btn_click,
     弹窗_关闭_函数, 基地_table_btn_back_click, 基地_table_btn_next_click, ui更新, 黄金自动生产机_btn_click, 炼金_黄金自动生产机_start_btn_click,
     炼金_黄金自动生产机_stop_btn_click, 基地_table_升级_返回_btn_click, navbar_冒险_btn_click, navbar_设置_btn_click, 确认弹窗, 确认弹窗_取消_函数,
     确认弹窗_确定_函数, 删除数据
 } from "./函数库.js";
 import { 金币, 更新金币, 基地_升级 } from "./变量.js";
+import { 慢慢消失, 慢慢出现} from "./特效.js";
 
 
 ui更新()
